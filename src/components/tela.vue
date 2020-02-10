@@ -1,0 +1,84 @@
+<template>
+  <div id="info">
+    <ul>
+      <li v-for="info in info" :key="info" @click="info.show = !info.show">
+        <h2>{{ info.name | formatId }}</h2>
+        <p v-show="info.show">{{ info.speciality }}</p>
+      </li>
+    </ul>
+    <button @click="deleteinfo">Delete Info</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      info: [
+        { name: "Chicago", speciality: "Machine Enginner", show: false },
+        { name: "West", speciality: "CV Enginner", show: false },
+        { name: "Agostinho", speciality: "Test Enginner", show: false },
+        { name: "Delfina", speciality: "Machine Enginner", show: false },
+        { name: "Chicago", speciality: "Computer Enginner", show: false },
+        { name: "Alexandra", speciality: "Envirmental Enginner", show: false },
+        { name: "Jose Augusto ", speciality: "ICT Manager", show: false }
+      ],
+      //   Using filter
+      blogs: []
+    };
+  },
+  methods: {
+    deleteinfo: function() {
+      this.info.pop();
+    }
+  }
+  // computed: {
+  //   formatId: function() {
+  //     return this.formatId.filter(formatId => {
+  //       return "string";
+  //     });
+  //   }
+  // }
+
+  //   created() {
+  //     this.$http
+  //       .get("https:jsonplaceholder.typicode.com/posts")
+  //       .then(function(data) {
+  //         this.blogs = data.body.slice(0, 10);
+  //       });
+  //   },
+  //   filters: {
+  //     formatId: function(value) {
+  //       if (!value) return "";
+  //       value = value.toString();
+  //       return value.charAt(0).toUpperCase() + value.slice(1);
+  //     }
+  //   }
+};
+</script>
+
+<style lang="scss" scoped>
+#info {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  flex-grow: 1;
+  flex-basis: 300px;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #222;
+  margin: 10px;
+}
+</style>
