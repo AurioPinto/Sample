@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import screen from "../views/screen";
 import baidu from "../views/baidu";
 // import value from "../views/value";
-import Error from "../views/Error";
+//import Error from "../views/Error"
 import tela from "../views/tela";
 import Home from "../views/Home.vue";
 
@@ -26,11 +26,6 @@ const routes = [
     path: "/tela",
     name: "tela",
     component: tela
-  },
-  {
-    path: "/Error",
-    name: "Error",
-    component: Error
   },
   // {
   //   path: "/value",
