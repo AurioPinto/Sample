@@ -21,7 +21,12 @@ export default {
         { name: "Delfina", speciality: "Machine Enginner", show: false },
         { name: "Chicago", speciality: "Computer Enginner", show: false },
         { name: "Alexandra", speciality: "Envirmental Enginner", show: false },
-        { name: "Jose Augusto ", speciality: "ICT Manager", show: false }
+        {
+          name: "Jose Augusto ",
+          speciality:
+            "The current research aim is to construct a fast system to enhance the quality of QR Code images to improve the decoding success rate, hence decreasing the time required to read the data contained in 2D bar codes. The system is an Convolutional Neural Network (CNN) with a structure of an auto-encoder, trained with a TensorFlow toolkit on self-generated images. The input is an image with a poor resolution and quality and the output is a clear, noise-less picture of the same QR Code. The output of the CNN can then be used to decode the QR Code’s data with any preferred decoding algorithm. The system has been deployed on the Raspberry Pi 3B+ and evaluated in different simulation obtaining an increase of about +100% success rate of correct decoding of low-quality QR Code images.",
+          show: false
+        }
       ],
       //   Using filter
       blogs: []
