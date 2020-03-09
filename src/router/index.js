@@ -1,11 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import screen from "../views/screen";
+import Home from "../views/Home.vue";
 import baidu from "../views/baidu";
 // import value from "../views/value";
 //import Error from "../views/Error"
 import tela from "../views/tela";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
