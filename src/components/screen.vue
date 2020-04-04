@@ -12,7 +12,7 @@
     <li
       v-for="(item, index) in items"
       :key="index"
-    >{{ parentMessage }} - {{ index }} - {{ item.message }}</li>
+    >>{{ parentMessage }} - {{ index }} - {{ item.message }}</li>
     <div id="todo-list-example">
       <form v-on:submit.prevent="addNewTodo">
         <label for="new-todo">Add a todo</label>
